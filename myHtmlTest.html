@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#hgwa {
+			background-color: purple;
+		}
+		.gwa {
+			background-color: green;
+		}
+		.one:hover {
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<table border="1" cellspacing="0">
+		<caption style="margin-bottom: 10px;">테스트</caption>
+		<colgroup>
+			<col>
+			<col width="80">
+			<col width="50">
+			<col width="50">
+			<col width="50">
+			<col width="60">
+			<col>
+		</colgroup>
+		<thead style="background-color: yellow">
+			<tr>
+				<th rowspan="2">순번</th>
+				<th rowspan="2">성명</th>
+				<th id="hgwa" colspan="3">과목</th>
+				<th rowspan="2">합계</th>
+				<th rowspan="2">평균</th>
+			</tr>
+			<tr>
+				<th class="gwa">국어</th>
+				<th class="gwa">영어</th>
+				<th class="gwa">수학</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<th colspan="2" style="background-color: blue; color:white;">합계</th>
+				<td class="one">130</td>
+				<td class="one">140</td>
+				<td class="one">170</td>
+				<td class="one">440</td>
+				<td class="one">73</td>
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>이순신</td>
+				<td>50</td>
+				<td>60</td>
+				<td>70</td>
+				<td>180</td>
+				<td>60</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>강감찬</td>
+				<td>80</td>
+				<td>80</td>
+				<td>100</td>
+				<td>260</td>
+				<td>86</td>
+			</tr>
+		</tbody>
+	</table>
+	<script>
+		document.querySelectorAll(".one").forEach(function(item){
+			item.addEventListener("click", function(){
+				alert(this.innerText);
+			});
+		});
+	</script>
+</body>
+</html>
